@@ -38,7 +38,7 @@
                               (point))))
     (thing-at-point--beginning-of-sexp)))
 
-(defun lext-paredit-drag-sexp-back ()
+(defun lext-drag-sexp-back ()
   "Drag the sexp back one position in the list."
   (interactive)
   (lext--start-of-sexp)
@@ -50,7 +50,7 @@
                                       'lext-motion-pulse-face))
   (backward-sexp))
 
-(defun lext-paredit-drag-sexp-forward ()
+(defun lext-drag-sexp-forward ()
   "Drag the sexp forward one position in the list."
   (interactive)
   (lext--start-of-sexp)

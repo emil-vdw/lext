@@ -32,7 +32,7 @@
   (unless
       (save-excursion
         ;; We are already at the start of an s-expression.
-        (equal (hpoint)
+        (equal (point)
                (ignore-errors (forward-sexp)
                               (backward-sexp)
                               (point))))

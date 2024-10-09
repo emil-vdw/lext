@@ -15,6 +15,7 @@
 ;;
 
 ;;; Code:
+(require 'thingatpt)
 
 (defun lext-clone-node ()
   "Clone the node at point."
@@ -43,8 +44,7 @@
   (interactive)
   (lext--start-of-sexp)
   (call-interactively 'transpose-sexps)
-  (let ((replaced-sexp-end (point)))
-    (backward-sexp))
+  (backward-sexp)
   (backward-sexp))
 
 (defun lext-drag-sexp-forward ()
@@ -56,8 +56,7 @@
   (save-excursion
     (backward-sexp)
     (backward-sexp)
-    (let ((replaced-sexp-start (point)))
-      (forward-sexp))))
+    (forward-sexp)))
 
 (provide 'lext-manipulation)
 ;;; lext-manipulation.el ends here

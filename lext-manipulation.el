@@ -44,10 +44,7 @@
   (lext--start-of-sexp)
   (call-interactively 'transpose-sexps)
   (let ((replaced-sexp-end (point)))
-    (backward-sexp)
-    (pulse-momentary-highlight-region (point)
-                                      replaced-sexp-end
-                                      'lext-motion-pulse-face))
+    (backward-sexp))
   (backward-sexp))
 
 (defun lext-drag-sexp-forward ()
@@ -60,10 +57,7 @@
     (backward-sexp)
     (backward-sexp)
     (let ((replaced-sexp-start (point)))
-      (forward-sexp)
-      (pulse-momentary-highlight-region replaced-sexp-start
-                                        (point)
-                                        'lext-motion-pulse-face))))
+      (forward-sexp))))
 
 (provide 'lext-manipulation)
 ;;; lext-manipulation.el ends here
